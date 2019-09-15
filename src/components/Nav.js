@@ -3,11 +3,11 @@ import { NavLink } from 'react-router-dom';
 
 const Nav = () => {
     return (
-        <nav class="main-nav">
+        <nav className="main-nav">
             <ul>
-                <li><a href='#'>Cats</a></li>
-                <li><a href='#'>Dogs</a></li>
-                <li><a href='#'>Computers</a></li>
+                <li><NavLink exact to='/rainbows'>Rainbows</NavLink></li>
+                <li><NavLink exact to='/mountains'>Mountains</NavLink></li>
+                <li><NavLink exact to='/beaches'>Beaches</NavLink></li>
                 {/* <li><NavLink to='/about'>About</NavLink></li> */}
             </ul>
         </nav>
