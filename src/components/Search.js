@@ -1,16 +1,18 @@
 import React, { Component } from 'react';
 
 export default class Search extends Component {
+    // set state to empty string
     state = {
         searchText: ''
     }
+    //function called on input to get the value of input field
     onSearchChange = e => {
         e.persist();
         this.setState(prevState => ({
             searchText: e.target.value
         }));
     }
-
+    // in this function props is the performsearch function seen in App.js which takes argument for the query string; the argument is taken from the value of the input field
     handleSubmit = e => {
         e.preventDefault();
         this.props.onSearch(this.state.searchText);

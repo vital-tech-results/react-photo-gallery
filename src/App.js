@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './App.css';
+
+// import components
 import Nav from './components/Nav';
 import Search from './components/Search';
 import apiKey from './components/config';
@@ -8,8 +10,8 @@ import PhotoList from './components/PhotoList';
 import NotFound from './components/NotFound';
 import About from './components/About'
 
-
 export default class App extends Component {
+  // super constructor to store state
   constructor() {
     super();
     this.state = {
@@ -17,10 +19,11 @@ export default class App extends Component {
       loading: true
     };
   }
-
+  // on component mount run this function
   componentWillMount() {
     this.performSearch();
   }
+  // perform the root API call and store response in state constructor above
   performSearch = (query = 'big island') => {
     fetch(`https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=${apiKey}&tags=${query}&safe_search=&per_page=24&format=json&nojsoncallback=1`)
       .then(response => response.json())
@@ -34,25 +37,22 @@ export default class App extends Component {
         console.log('There was an error fetching and parsing data', error);
       });
   }
-
-
+  //react must have a render method; inside render is the return method
   render() {
     return (
       <BrowserRouter>
         <div className="container">
           <Search onSearch={this.performSearch} />
           <Nav onClick={this.performSearch} />
-          <Switch>
-            <Route exact path="/" render={() => (this.state.loading)
+          <Switch> {/* use switch to ensure routes are not shown on every page*/}
+            <Route path="/" render={() => (this.state.loading)
               ? <h3>LOADING...</h3>
-              : <PhotoList photos={this.state.photos} />} />
-
-            <Route exact path="/about" component={About} />
-            <Route exact component={NotFound} />
+              : <PhotoList photos={this.state.photos} />} />  {/*use this ternary operator to show the loading notification */}
+            <Route path="/about" component={About} />
+            <Route component={NotFound} />
           </Switch>
         </div>
       </BrowserRouter>
     );
   }
 }
-

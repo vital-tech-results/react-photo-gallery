@@ -1,5 +1,6 @@
 import React from 'react';
 
+// simple not found component 
 const NotFound = () => {
     return (
         <header className="not-found">

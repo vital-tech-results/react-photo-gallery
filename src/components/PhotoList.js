@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import Photo from './Photo';
 import NotFound from './NotFound';
+
+// props are passed from App.js and in this case prop is the performsearch function in App.js
+// interpolation is used to create image url
 const PhotoList = props => {
     const results = props.photos;
     let photos;
@@ -12,6 +15,7 @@ const PhotoList = props => {
         photos = <NotFound />;
     }
 
+    // photos variable above is rendered below
     return (
         <div className="photo-container">
             <h2>Results</h2>
