@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
 
 export default class Search extends Component {
-
     state = {
         searchText: ''
     }
-
     onSearchChange = e => {
         e.persist();
         this.setState(prevState => ({
