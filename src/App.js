@@ -42,7 +42,7 @@ export default class App extends Component {
   //react must have a render method; inside render is the return method
   render() {
     return (
-      <BrowserRouter>
+      <BrowserRouter basename="/react-photo-gallery">
         <div className="container">
           <Search onSearch={this.performSearch} />
           <Nav onClick={this.performSearch} />

@@ -1,5 +1,7 @@
 # React photo search app 
 
+## [View live demo here](https://dominick-designs.github.io/react-photo-gallery/) 
+
 * search Flickr photos
 * 3 pre-defined searches (rainbows, mountains, beaches)
 * if no results match your search parameters then you will see a "No photos found" response
