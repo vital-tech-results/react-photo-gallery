@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Photo from './Photo';
 import NotFound from './NotFound';
 
@@ -18,7 +18,7 @@ const PhotoList = props => {
     // photos variable above is rendered below
     return (
         <div className="photo-container">
-            <h2>Results</h2>
+            <h2>Photos of {props.query}</h2>
             <ul>
                 {photos}
             </ul>

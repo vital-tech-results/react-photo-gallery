@@ -1,3 +1,17 @@
+# React photo search app 
+
+* search Flickr photos
+* 3 pre-defined searches (rainbows, mountains, beaches)
+* if no results match your search parameters then you will see a "No photos found" response
+  
+## Known issues
+
+* if an incorrect url is typed in the address bar, automatically redirects to home page (rather than responding with warning)
+
+## Roadmap 
+* Fix url redirect with custom 404 error for user
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

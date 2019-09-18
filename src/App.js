@@ -8,7 +8,7 @@ import Search from './components/Search';
 import apiKey from './components/config';
 import PhotoList from './components/PhotoList';
 import NotFound from './components/NotFound';
-import About from './components/About'
+import About from './components/About';
 
 export default class App extends Component {
   // super constructor to store state
@@ -16,11 +16,12 @@ export default class App extends Component {
     super();
     this.state = {
       photos: [],
+      query: '',
       loading: true
     };
   }
-  // on component mount run this function
-  componentWillMount() {
+  // on component mount run this function *named UNSAFE according to error on console
+  UNSAFE_componentWillMount() {
     this.performSearch();
   }
   // perform the root API call and store response in state constructor above
@@ -30,6 +31,7 @@ export default class App extends Component {
       .then(responseData => {
         this.setState({
           photos: responseData.photos.photo,
+          query: query,
           loading: false
         });
       })
@@ -44,11 +46,15 @@ export default class App extends Component {
         <div className="container">
           <Search onSearch={this.performSearch} />
           <Nav onClick={this.performSearch} />
-          <Switch> {/* use switch to ensure routes are not shown on every page*/}
+
+          <Switch> {/* use switch to ensure "not found" route is not shown on every page*/}
             <Route path="/" render={() => (this.state.loading)
               ? <h3>LOADING...</h3>
-              : <PhotoList photos={this.state.photos} />} />  {/*use this ternary operator to show the loading notification */}
-            <Route path="/about" component={About} />
+              : <PhotoList photos={this.state.photos} query={this.state.query} />} />  {/*use this ternary operator to show the loading notification */}
+            <Route path="/rainbows" component={NotFound} />
+            <Route path="/mountains" />
+            <Route path="/beaches" />
+            {/* <Route path="/about" component={About} /> */}
             <Route component={NotFound} />
           </Switch>
         </div>
