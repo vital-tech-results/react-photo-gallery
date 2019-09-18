@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/react-photo-gallery/static/css/main.3d9240b8.chunk.css",
+    "main.js": "/react-photo-gallery/static/js/main.6c2b994d.chunk.js",
+    "main.js.map": "/react-photo-gallery/static/js/main.6c2b994d.chunk.js.map",
+    "runtime~main.js": "/react-photo-gallery/static/js/runtime~main.efc8c7ed.js",
+    "runtime~main.js.map": "/react-photo-gallery/static/js/runtime~main.efc8c7ed.js.map",
+    "static/js/2.625c8377.chunk.js": "/react-photo-gallery/static/js/2.625c8377.chunk.js",
+    "static/js/2.625c8377.chunk.js.map": "/react-photo-gallery/static/js/2.625c8377.chunk.js.map",
+    "index.html": "/react-photo-gallery/index.html",
+    "precache-manifest.98ad33ff2aa81c6c4099c5a1dddb20f3.js": "/react-photo-gallery/precache-manifest.98ad33ff2aa81c6c4099c5a1dddb20f3.js",
+    "service-worker.js": "/react-photo-gallery/service-worker.js",
+    "static/css/main.3d9240b8.chunk.css.map": "/react-photo-gallery/static/css/main.3d9240b8.chunk.css.map"
+  }
+}
