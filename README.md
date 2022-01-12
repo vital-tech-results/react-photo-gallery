@@ -1,18 +1,25 @@
-# React photo search app 
+# React photo search app
 
-## [View live demo here](https://dominick-designs.github.io/react-photo-gallery/) 
+## [View live demo here](https://vital-tech-results.github.io/react-photo-gallery/)
 
-* search Flickr photos
-* 3 pre-defined searches (rainbows, mountains, beaches)
-* if no results match your search parameters then you will see a "No photos found" response
-  
+- search Flickr photos
+- 3 pre-defined searches (rainbows, mountains, beaches)
+- if no results match your search parameters then you will see a "No photos found" response
+
+## Technologies used
+
+- React
+- React Dom
+- React Router Dom
+- Flikr API
+
 ## Known issues
 
-* if an incorrect url is typed in the address bar, automatically redirects to home page (rather than responding with warning)
+- if an incorrect url is typed in the address bar, automatically redirects to home page (rather than responding with warning)
 
-## Roadmap 
-* Fix url redirect with custom 404 error for user
+## Roadmap
 
+- Fix url redirect with custom 404 error for user
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
