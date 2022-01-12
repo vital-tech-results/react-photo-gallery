@@ -11,7 +11,7 @@
 - React
 - React Dom
 - React Router Dom
-- Flikr API (free version)
+- Flikr API
 
 ## Known issues
 
